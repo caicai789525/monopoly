@@ -1,3 +1,6 @@
+from board import Board
+
+
 class Player:
     def __init__(self, name, initial_money):
         self.name = name
@@ -10,9 +13,12 @@ class Player:
 
     def move(self, steps):
         if not self.in_jail:
-            self.position = (self.position + steps) % 30
+            if not hasattr(Board(), 'tiles'):
+                print("Board 对象缺少 tiles 属性")
+                return
+            self.position = (self.position + steps) % len(Board().tiles)
             if self.position < 0:
-                self.position += 30
+                self.position += len(Board().tiles)
 
     def pay(self, amount):
         self.money -= amount

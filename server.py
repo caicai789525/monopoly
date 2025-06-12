@@ -34,7 +34,6 @@ class GameServer:
                             'password': password
                         }
                         conn.sendall(f"ROOM_CREATED|{room_id}".encode('utf-8'))
-                        # 若玩家数为 1，直接发送游戏开始消息
                         if num_players == 1:
                             conn.sendall("GAME_START".encode('utf-8'))
                 elif command == 'JOIN_ROOM':

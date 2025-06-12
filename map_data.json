@@ -36,7 +36,6 @@
         {"type": "tax", "name": "税收 3", "amount": 100},
         {"type": "property", "name": "地产 16", "price": 480, "rent": 48, "owner": null},
         {"type": "community", "name": "社区福利卡 4"},
-        {"type": "property", "name": "地产 17", "price": 500, "rent": 50, "owner": null},
-        {"type": "chance", "name": "机会卡 5"}
+        {"type": "property", "name": "地产 17", "price": 500, "rent": 50, "owner": null}
     ]
 }
